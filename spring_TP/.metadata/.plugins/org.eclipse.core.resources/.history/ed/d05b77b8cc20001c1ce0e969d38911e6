@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="member">
+	<select id="loginchk" 
+			parameterType="com.yh.finalfinaltp.dto.MemberDTO" 
+			resultType="com.yh.finalfinaltp.dto.MemberDTO">
+		select * from member where id=#{id} and pw=#{pw}
+		limit 0,1
+	</select>
+	<select id="selectone" parameterType="int" resultType="com.yh.finalfinaltp.dto.MemberDTO">
+		select * from member where idx=#{idx}
+	</select>
+	<select id="select" resultType="com.yh.finalfinaltp.dto.MemberDTO">
+		select * from member
+	</select>
+	<insert id="insert" parameterType="com.yh.finalfinaltp.dto.MemberDTO">
+		insert into member
+		(id, pw, age, gender)
+		values
+		(#{id}, #{pw}, #{age}, #{gender})
+	</insert>
+	<update id="update" parameterType="com.yh.finalfinaltp.dto.MemberDTO">
+		update member
+		set id=#{id}, pw=#{pw}, age=#{age}, gender=#{gender}
+		where idx=#{idx} 
+	</update>
+	<delete id="delete" parameterType="int">
+		delete from member where idx = #{idx}
+	</delete>
+</mapper>

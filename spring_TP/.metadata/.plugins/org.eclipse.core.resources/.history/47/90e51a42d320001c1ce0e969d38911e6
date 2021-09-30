@@ -1,0 +1,15 @@
+package com.yh.finalfinaltp.dao;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.yh.finalfinaltp.dto.MemberDTO;
+
+@Repository
+public class MemberDAO {
+	public MemberDTO chklogin(MemberDTO dto) {
+		
+		return dto;
+	}
+
+}

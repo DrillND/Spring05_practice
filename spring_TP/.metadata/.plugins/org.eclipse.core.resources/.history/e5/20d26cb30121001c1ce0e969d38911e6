@@ -1,0 +1,13 @@
+package com.yh.finalfinaltp.dao;
+
+import com.yh.finalfinaltp.dto.MemberDTO;
+
+
+public class MemberDAO {
+	
+	public MemberDTO chklogin(MemberDTO dto) {
+		
+		return dto;
+	}
+
+}
